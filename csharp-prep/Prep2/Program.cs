@@ -30,6 +30,17 @@ class Program
             letter = "F";  
         }
 
+        if (gradePer % 10 >= 7 && !(letter == "A" || letter == "F")) 
+        {
+            letter += "+";
+        }
+        else if (gradePer % 10 < 3 && letter != "F")
+        {
+            letter += "-";
+        }
+
+
+
         //Printing the grade in letter
         Console.WriteLine($"Your grade is {letter}");
 
