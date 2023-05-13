@@ -31,6 +31,7 @@ class Program
             //parsing could be ommited but I feel more comfortable working
             //with numbers
             input = Console.ReadLine();
+            Console.WriteLine();
 
             userOption = int.Parse(input);
 
@@ -47,13 +48,14 @@ class Program
             else if (userOption == 3){
                 Console.Write("Introduce a file name: ");
                 fileName = Console.ReadLine();
+                Console.WriteLine();
                 journal.Save(fileName);
                 }
 
             else if(userOption == 4){
-                Journal journal2 = new Journal();
                 Console.Write("Introduce a file name: ");
                 fileName = Console.ReadLine();
+                Console.WriteLine();
                 journal.Load(fileName);
             }
 

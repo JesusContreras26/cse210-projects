@@ -18,6 +18,7 @@ public class Journal{
         _listLenght = _entries.Count;
         _entries[_listLenght - 1]._prompt =_entries[_listLenght - 1]._randomPrompt.PromptDis();
         _entries[_listLenght - 1]._entry = Console.ReadLine();
+        Console.WriteLine();
         _entries[_listLenght - 1].Store();
     }
     
@@ -39,6 +40,7 @@ public class Journal{
 
     public void Load(string fileName){
         string[] lines = System.IO.File.ReadAllLines(fileName);
+        _entries.Clear();
         foreach (string line in lines){
             _entries.Add(new Entry());
             string[] parts = line.Split(",");
@@ -48,7 +50,7 @@ public class Journal{
             _entries[_listLenght - 1]._entry = parts[2].Replace("~" , ",");
             _entries[_listLenght - 1].Store();
         }
-
+        
     }
 
     //Save method will save the entries to the file, the file name I'll get it from the user

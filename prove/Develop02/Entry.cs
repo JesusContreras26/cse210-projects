@@ -37,6 +37,7 @@ public class Entry
     public void EntryDisp(){
         _displayEntry = _entry.Replace("~" , ",");
         Console.WriteLine($"Date: {_date} - Prompt: {_prompt}\n{_displayEntry}");
+        Console.WriteLine();
     }
 
 }
