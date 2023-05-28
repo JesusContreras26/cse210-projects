@@ -10,11 +10,6 @@ class Reference{
     private string _reference;
 
     //Making all the constructores for three different cases
-    public Reference(string book, int chapter){
-        _book = book;
-        _chapter = chapter;
-        _reference = $"{_book} {_chapter}";
-    }
 
     public Reference(string book, int chapter, int verseBegin){
         _book = book;
