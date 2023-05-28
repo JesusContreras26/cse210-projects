@@ -3,9 +3,9 @@ using System;
 //Scripture will be the class that'll have more importance
 public class Scripture{
 
-    //Defining and declaring variables, I need a list of word object for each
+    //Defining and declaring variables, I need a list of words object for each
     //Word of the string in order hide and replace them likewise a need string list object
-    //To first get them all splited as an array member and then I'll populate my list of word objects
+    //To first get them all split as an array member and then I'll populate my list of word objects
     //also I'll need a random object to select a random member of the word list
     private List<Word> _words = new List<Word>();
     private string _scripture;
@@ -23,7 +23,7 @@ public class Scripture{
         int counter = 0;
 
         //Here I'll populate list words object making use of a 
-        //foreach loop and the string list with the words inside of them
+        //fore-ach loop and the string list with the words inside of them
         //I did also populate the word variable inside of each word object
         foreach (string word in _allWords){
             _words.Add(new Word());
@@ -45,12 +45,12 @@ public class Scripture{
                 Console.WriteLine($"Press enter to continue or type 'quit' to finish:");
                 _userDecision = Console.ReadLine();
                 Console.Clear();
-                //Conditional if the user type quit to finish the program
+                //Conditional if the user type quit finishing the program
                 if (_userDecision != "quit"){
                     //For loop to hide three words each time the user press enter
                     //Although if a word is twice or more in the string and that word is
                     //Selected it'll hide more than four, likewise at the end could be left
-                    //two or one word depending if all word's sumn is a number divisible of 3
+                    //two or one word depending if all word's sum is a number divisible of 3
                     //or if in a moment there were hidden more than 3 words for what I mentioned
                     //before. 
                     for(int i = 0; i <= 2; i++){
@@ -77,7 +77,7 @@ public class Scripture{
         DisplayScripture();
     }
 
-    //DisplayScripture method to display the scripture it's a private method because it'll be use only inside of the class
+    //DisplayScripture method to display the scripture it's a private method because it'll be used only inside of the class
     private void DisplayScripture(){
         Console.WriteLine($"{_reference}{_scripture}");
     }
