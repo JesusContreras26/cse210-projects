@@ -12,7 +12,8 @@ class Program
 
         
         //Conditional to populate reference and scripture classes depending of what scripture has been chosen
-        int _randomNumber = _random.Next(0, 3);
+        Console.Clear();
+        int _randomNumber = _random.Next(0, Scriptures.Count);
         if (Scriptures[_randomNumber].Count-1 > 3){
             Reference _reference = new Reference(Scriptures[_randomNumber]["Book"], int.Parse(Scriptures[_randomNumber]["Chapter"]), int.Parse(Scriptures[_randomNumber]["FirstVerse"]), int.Parse(Scriptures[_randomNumber]["LastVerse"]));
             string Scripture = Scriptures[_randomNumber]["Scripture"];
