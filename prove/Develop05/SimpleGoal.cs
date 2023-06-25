@@ -3,7 +3,7 @@ using System;
 //SimpleGoal class, it's a child of goal class
 public class SimpleGoal: Goal{
     //bool to check if the goal has been completed or not
-    private bool _check = false;
+    private bool _check;
 
     //Constructor for assigning values to this class and the super class
     public SimpleGoal(string name, string description, int points, bool check): base(name, description, points){
